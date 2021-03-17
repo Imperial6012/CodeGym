@@ -9,6 +9,7 @@ class Temperature {
         return this.celcius+273;
     }
 }
+
 let temperature = new Temperature(30);
 let fahrenheit = temperature.getFahrenheit();
 let kevin = temperature.getKevin();
