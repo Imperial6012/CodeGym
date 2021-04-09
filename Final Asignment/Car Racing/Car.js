@@ -1,25 +1,23 @@
 var ONE_RADIAN = Math.PI/180;
-var _360_RADIAN = 360*ONE_RADIAN;
- 
+var _360_RADIAN = 720*ONE_RADIAN;
 function Car(x,y, mapWidth, mapHeight){
     this.img = new Image();
     this.img.src = "Img/Car.png";
     this.mapWidth = mapWidth;
     this.mapHeight = mapHeight;
 
-    this.maxspeed = 17;
-    this.minspeed = -5;
+    this.maxspeed = 10;
+    this.minspeed = -2.5;
     this.speed = 0;
- 
-    this.acceleration = 2.0;
+
+    this.acceleration = 0.5;
     this.friction = 0;
-    this.rotationAngle = 5*ONE_RADIAN;
+    this.rotationAngle = 3.0*ONE_RADIAN;
     this.angle = -90 * ONE_RADIAN;
-    this.height = 30;
-    this.width = 50;
+    this.height = 20;
+    this.width = 30;
     this.h_height = this.height/2;
     this.h_width = this.width/2;
-
     this.cx = x;
     this.cy = y;
 
@@ -31,6 +29,7 @@ function Car(x,y, mapWidth, mapHeight){
     this.vertices.push({x: 0, y: 0});
  
 }
+
 Car.prototype.draw = function(context){
     context.save();
     context.translate(this.cx,this.cy);
@@ -79,13 +78,11 @@ Car.prototype.update = function(){
     };
 }
 Car.prototype.handleInput = function(keyStates){
-    if(keyStates[Keys.UP_ARROW])
-    {
+    if(keyStates[Keys.UP_ARROW]) {
         this.speed += this.acceleration;
         if(this.speed > this.maxspeed)
             this.speed = this.maxspeed;
-    }else if(keyStates[Keys.DOWN_ARROW])
-    {
+    }else if(keyStates[Keys.DOWN_ARROW]) {
         this.speed -= this.acceleration;
         if(this.speed < this.minspeed)
             this.speed = this.minspeed;
@@ -98,7 +95,7 @@ Car.prototype.handleInput = function(keyStates){
  
     this.angle = this.angle % _360_RADIAN;
  
-    this.speed *= (1 - this.friction);
+    this.speed *= (1.0 - this.friction);
     if(Math.abs(this.speed)<0.1)
         this.speed = 0;
 }
