@@ -46,8 +46,8 @@
         _context.font = "16px arial";
         _canvas.onkeydown = canvas_keyDown;
         _canvas.onkeyup = canvas_keyUp;
-
-        _backgroundImg.src = "http://miromannino.com/wp-content/uploads/ur2009-map.png";
+        _backgroundImg = new Image() 
+        _backgroundImg.src = "Img/Map.png";
         _backgroundImg.onload = function(){
 
             _context.drawImage(_backgroundImg,0,0,_canvas.width,_canvas.height);
