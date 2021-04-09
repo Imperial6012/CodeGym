@@ -1,18 +1,18 @@
 var ONE_RADIAN = Math.PI/180;
-var _360_RADIAN = 720*ONE_RADIAN;
+var _360_RADIAN = 360*ONE_RADIAN;
 function Car(x,y, mapWidth, mapHeight){
     this.img = new Image();
     this.img.src = "Img/Car.png";
     this.mapWidth = mapWidth;
     this.mapHeight = mapHeight;
 
-    this.maxspeed = 10;
-    this.minspeed = -2.5;
+    this.maxspeed = 4;
+    this.minspeed = -2;
     this.speed = 0;
 
     this.acceleration = 0.5;
     this.friction = 0;
-    this.rotationAngle = 3.0*ONE_RADIAN;
+    this.rotationAngle = 4.0*ONE_RADIAN;
     this.angle = -90 * ONE_RADIAN;
     this.height = 20;
     this.width = 30;
