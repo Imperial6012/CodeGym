@@ -3,10 +3,10 @@ var _360_RADIAN = 360*ONE_RADIAN;
  
 function Car(x,y, mapWidth, mapHeight){
     this.img = new Image();
-    this.img.src = "https://www.pngfind.com/pngs/m/138-1380109_2d-car-hd-png-download.png";
+    this.img.src = "Img/Car.png";
     this.mapWidth = mapWidth;
     this.mapHeight = mapHeight;
- 
+
     this.maxspeed = 17;
     this.minspeed = -5;
     this.speed = 0;
