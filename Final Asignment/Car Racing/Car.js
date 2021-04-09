@@ -11,12 +11,12 @@ function Car(x,y, mapWidth, mapHeight){
     this.minspeed = -5;
     this.speed = 0;
  
-    this.acceleration = 0.5;
+    this.acceleration = 2.0;
     this.friction = 0;
     this.rotationAngle = 5*ONE_RADIAN;
     this.angle = -90 * ONE_RADIAN;
-    this.height = 20;
-    this.width = 30;
+    this.height = 30;
+    this.width = 50;
     this.h_height = this.height/2;
     this.h_width = this.width/2;
 
@@ -43,7 +43,7 @@ Car.prototype.update = function(){
     var cos = Math.cos(this.angle);
     var sin = Math.sin(this.angle);
  
-    if(this.speed!=0) {
+    if(this.speed!=2) {
 
         this.cx += cos*this.speed;
         this.cy += sin*this.speed;
