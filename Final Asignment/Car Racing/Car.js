@@ -7,7 +7,7 @@ function Car(x,y, mapWidth, mapHeight){
     this.mapHeight = mapHeight;
 
     this.maxspeed = 4;
-    this.minspeed = -2;
+    this.minspeed = 0;
     this.speed = 0;
 
     this.acceleration = 0.5;
@@ -18,8 +18,8 @@ function Car(x,y, mapWidth, mapHeight){
     this.width = 30;
     this.h_height = this.height/2;
     this.h_width = this.width/2;
-    this.cx = x;
-    this.cy = y;
+    this.cx = 620;
+    this.cy = 150;
 
     this.vertices = [];
  
