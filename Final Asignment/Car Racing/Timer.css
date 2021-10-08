@@ -1,0 +1,17 @@
+#Timer h2{
+    position: relative;
+    display:block;
+    color:#fff;
+    text-align: center;
+    margin:10px 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+}
+#Timer #Time{
+    display:flex;
+}
+#Timer #Time div{
+    position: relative;
+    margin: 0 5px;
+}
